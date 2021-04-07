@@ -1,13 +1,23 @@
 import java.util.HashMap;
 import java.util.Map;
-
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
 
     public class DFA {
         private static char currentState = 'a';
         private static Map<String,Character> map = new HashMap<String,Character>();
 
         public DFA(String filename){
-                //
+            String alphabet;
+            String states;
+            String startState;
+            String acceptState;
+
+
+            String cleanedInput = cleanInput(alphabet);
+        }
+        String cleanInput(String input){
+
         }
     public static void main(String[] args) {
         
@@ -44,4 +54,6 @@ import java.util.Map;
         int n =0;
         return map.get(""+currentState+input);
     }
+
+    
 }
