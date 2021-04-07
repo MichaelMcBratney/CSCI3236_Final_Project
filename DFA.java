@@ -7,7 +7,7 @@ import java.util.Map;
         private static Map<String,Character> map = new HashMap<String,Character>();
 
         public DFA(String filename){
-            
+                ///
         }
     public static void main(String[] args) {
         
