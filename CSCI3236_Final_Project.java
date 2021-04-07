@@ -32,6 +32,8 @@ import java.util.Map;
         return currentState;
     }
 
+    //
+
     static void addToTheMap(char state, int input, char output){
         map.put(""+state+input,output);
     }
