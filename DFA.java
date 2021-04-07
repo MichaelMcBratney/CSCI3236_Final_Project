@@ -25,7 +25,7 @@ import java.util.Map;
 
         //test
         System.out.println(map.toString());
-        currentState = DFA(1);
+        currentState = ChangeState(1);
 
         System.out.println("current state after the input: "+ currentState);
 
@@ -40,7 +40,8 @@ import java.util.Map;
     static void addToTheMap(char state, int input, char output){
         map.put(""+state+input,output);
     }
-    public static char DFA(int input){
+    public static char ChangeState(int input){
+        int n =0;
         return map.get(""+currentState+input);
     }
 }
