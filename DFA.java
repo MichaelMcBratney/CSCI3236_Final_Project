@@ -59,12 +59,13 @@ import java.util.Scanner;
                     System.out.println("Input is " + currInput);
                     changeState(currInput);
                 }
-                if (accept.indexOf(currentState) != -1) {
+            }
+
+            if (accept.indexOf(currentState) != -1) {
                         System.out.println(currentState + " is an accept state. The string is accepted!");
                         currentState = start;
                         return true;
                     }
-            }
 
             System.out.println("Current state is " + currentState);
             System.out.println("The string is not accepted.");
