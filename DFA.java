@@ -40,6 +40,8 @@ import java.util.Scanner;
         return currentState;
     }
 
+    String getStates(){return states;}
+
      void addToTheMap(char state, int input, char output){
         map.put(""+state+input,output);
     }
@@ -57,7 +59,14 @@ import java.util.Scanner;
 
                     int currInput = inputString.charAt(i)-'0';
                     System.out.println("Input is " + currInput);
-                    changeState(currInput);
+                    try {
+                        changeState(currInput);
+                    } catch (NullPointerException ex){
+                        System.out.println("The DFA has no transition function from this state with this input");
+                        System.out.println("The string is not accepted.");
+                        currentState = start;
+                        return false;
+                    }
                 }
             }
 

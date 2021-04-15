@@ -15,7 +15,7 @@ class CSCI3236_Final_Project{
             tst.runDFA(x);
             System.out.print("\nEnter String (type exit when finished): ");
             x = input.nextLine();
-        } while (x != "exit");
+        } while (!x.trim().equals("exit"));
 
         input.close();
     }
