@@ -6,6 +6,7 @@ class CSCI3236_Final_Project{
     public static void main(String[] args)throws FileNotFoundException 
     {
         DFA tst = new DFA(args[0]);
+
         Scanner input = new Scanner(System.in);
         String x;
 
@@ -15,8 +16,8 @@ class CSCI3236_Final_Project{
             tst.runDFA(x);
             System.out.print("\nEnter String (type exit when finished): ");
             x = input.nextLine();
-        } while (!x.trim().equals("exit"));
-
+        } while (!x.trim().toLowerCase().equals("exit"));
         input.close();
     }
 }
+

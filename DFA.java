@@ -14,25 +14,24 @@ import java.util.Scanner;
         private String accept;
 
         public DFA(String filename){
-            //System.out.println(filename);
             try{
             Scanner input = new Scanner(new File(filename));
             alphabet = input.nextLine().replaceAll("\\W+","");
             states = input.nextLine().replaceAll("\\W+","");
             start = input.nextLine().replaceAll("\\W+","").charAt(0);
             accept = input.nextLine().replaceAll("\\W+","");
-            //System.out.println(accept);
             String tmp;
             currentState = start;
             while (input.hasNext()) {
                 tmp = input.nextLine();
                 tmp = tmp.replaceAll("\\W+","");
-                //System.out.println(tmp);
                 addToTheMap((char)tmp.charAt(0), tmp.charAt(1)-'0', tmp.charAt(2));
             }
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
-            e.printStackTrace();
+
+                System.out.println("You failed to enter a valid file.");
+                e.printStackTrace();
         }
         }
 
